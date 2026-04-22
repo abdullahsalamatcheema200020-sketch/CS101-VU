@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12: Programming Languages | CS101</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="bg-animation"><div class="binary-rain" id="binaryRain"></div></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-microchip"></i><span>CS<strong>101</strong></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../index.html#chapters"><i class="fas fa-book"></i> All Chapters</a></li>
+                <li><a href="../index.html#quiz"><i class="fas fa-trophy"></i> Quiz</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div class="chapter-page">
+        <div class="chapter-hero">
+            <div class="chapter-big-icon" style="background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); color:#333;">
+                <i class="fas fa-code"></i>
+            </div>
+            <h1>Chapter 12: <span class="gradient-text">Programming Languages</span></h1>
+            <p>How humans talk to computers! 💬🤖</p>
+        </div>
+
+        <section class="lesson-section">
+            <h2><i class="fas fa-question-circle"></i> What is a Programming Language?</h2>
+            <p>Computers only understand <strong>binary (0s and 1s)</strong>. But writing binary is terrible for humans! 😫</p>
+            <p>So we invented <strong>programming languages</strong> — a way to write instructions in almost English, which gets translated to binary.</p>
+            <div class="info-box success">
+                <strong>🌉 Think of it like translation:</strong><br>
+                You write Python (like English) → Translator (compiler/interpreter) → Computer binary → Computer does the task!
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><i class="fas fa-layer-group"></i> Generations of Languages</h2>
+            
+            <div class="gate-card">
+                <div class="gate-name">
+                    <div class="gate-symbol">1st</div>
+                    <h2 style="margin: 0;">Machine Language</h2>
+                </div>
+                <p>Pure binary: <code style="color:#43e97b;">10110000 01100001</code></p>
+                <p>The ONLY language computer directly understands. But impossible for humans! 😵</p>
+            </div>
+
+            <div class="gate-card">
+                <div class="gate-name">
+                    <div class="gate-symbol" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">2nd</div>
+                    <h2 style="margin: 0;">Assembly Language</h2>
+                </div>
+                <p>Uses short codes instead of binary: <code style="color:#43e97b;">MOV AL, 61h</code></p>
+                <p>Still hard, but better than pure binary. Needs an <strong>assembler</strong> to convert.</p>
+            </div>
+
+            <div class="gate-card">
+                <div class="gate-name">
+                    <div class="gate-symbol" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">3rd</div>
+                    <h2 style="margin: 0;">High-Level Languages</h2>
+                </div>
+                <p>Look almost like English! Examples: <strong>Python, Java, C++, JavaScript, C#</strong></p>
+                <div class="example-box">
+                    <p style="color:#43e97b;">print("Hello, World!")</p>
+                </div>
+                <p>Needs a <strong>compiler</strong> or <strong>interpreter</strong> to translate to machine language.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><i class="fas fa-brain"></i> Programming Paradigms</h2>
+            <p>Different STYLES of writing code:</p>
+            <div class="playground-grid">
+                <div class="feature">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Imperative</h3>
+                    <p>Give step-by-step commands. "Do this, then this, then this." (C, Pascal)</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📝</div>
+                    <h3>Declarative</h3>
+                    <p>Describe WHAT you want, not how. (SQL: "SELECT all users")</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Functional</h3>
+                    <p>Everything is a function. Pure, no side-effects. (Haskell, Lisp)</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📦</div>
+                    <h3>Object-Oriented</h3>
+                    <p>Organize code as "objects" with data & actions. (Java, Python, C++)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><i class="fas fa-cubes"></i> Object-Oriented Programming (OOP)</h2>
+            <p>OOP is the MOST POPULAR modern paradigm. Key ideas:</p>
+            <div class="info-box">
+                <strong>🏗️ Class</strong> = blueprint (like a "Car" design)<br>
+                <strong>🚗 Object</strong> = actual thing made from blueprint (your specific car)<br>
+                <strong>🎨 Properties</strong> = data (color, speed)<br>
+                <strong>🔧 Methods</strong> = actions (drive, stop, honk)
+            </div>
+            <div class="example-box">
+                <p><span style="color:#f093fb;">class</span> <span style="color:#4facfe;">Car</span> {</p>
+                <p>&nbsp;&nbsp;color = <span style="color:#43e97b;">"red"</span>;</p>
+                <p>&nbsp;&nbsp;speed = <span style="color:#43e97b;">0</span>;</p>
+                <p>&nbsp;&nbsp;<span style="color:#f093fb;">function</span> drive() { speed += 10; }</p>
+                <p>}</p>
+                <p>myCar = <span style="color:#f093fb;">new</span> <span style="color:#4facfe;">Car</span>(); // An object!</p>
+                <p>myCar.drive(); // Uses method</p>
+            </div>
+            <h3>OOP Benefits</h3>
+            <ul style="color:var(--gray); padding-left: 1.5rem; line-height: 2;">
+                <li>♻️ <strong>Reusability</strong>: Write once, use many times</li>
+                <li>🔒 <strong>Information Hiding</strong>: Keep internal data safe</li>
+                <li>🧩 <strong>Modularity</strong>: Break code into manageable pieces</li>
+            </ul>
+        </section>
+
+        <section class="lesson-section">
+            <h2><i class="fas fa-clipboard-check"></i> Summary</h2>
+            <div class="example-box">
+                <p>✅ Generations: <span class="highlight">Machine → Assembly → High-Level</span></p>
+                <p>✅ <span class="highlight">Compiler</span> = translates whole program at once</p>
+                <p>✅ <span class="highlight">Interpreter</span> = translates line by line</p>
+                <p>✅ Paradigms: Imperative, Declarative, Functional, <span class="highlight">OOP</span></p>
+                <p>✅ OOP uses <span class="highlight">Classes, Objects, Methods</span></p>
+            </div>
+        </section>
+
+        <div class="chapter-nav">
+            <a href="algorithms.html"><i class="fas fa-arrow-left"></i> Previous</a>
+            <a href="software-eng.html">Next: Software Engineering <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
