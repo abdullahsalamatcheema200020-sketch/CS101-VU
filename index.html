@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS101 Interactive Learning Hub | VU BSCS</title>
+    <meta name="description" content="Interactive learning platform for CS101 Introduction to Computing - Virtual University of Pakistan">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="binary-rain" id="binaryRain"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-microchip"></i>
+                <span>CS<strong>101</strong></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#chapters"><i class="fas fa-book"></i> Chapters</a></li>
+                <li><a href="#playground"><i class="fas fa-flask"></i> Playground</a></li>
+                <li><a href="#quiz"><i class="fas fa-trophy"></i> Quiz</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="badge">
+                <i class="fas fa-graduation-cap"></i>
+                Virtual University of Pakistan • BSCS Semester 1
+            </div>
+            <h1 class="hero-title">
+                Master <span class="gradient-text">CS101</span><br>
+                The Fun Way! <span class="wave">👋</span>
+            </h1>
+            <p class="hero-subtitle">
+                Introduction to Computing made <strong>simple</strong>, <strong>visual</strong>, and <strong>interactive</strong>. 
+                Learn computer science concepts through animations and hands-on demos — no boring textbooks! 📚✨
+            </p>
+            <div class="hero-buttons">
+                <a href="#chapters" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Start Learning
+                </a>
+                <a href="#playground" class="btn btn-secondary">
+                    <i class="fas fa-play"></i> Try Demos
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">Chapters</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Interactive Demos</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Quiz Questions</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <i class="fas fa-code"></i>
+                <span>01010101</span>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fas fa-network-wired"></i>
+                <span>Networks</span>
+            </div>
+            <div class="floating-card card-3">
+                <i class="fas fa-microchip"></i>
+                <span>CPU</span>
+            </div>
+            <div class="floating-card card-4">
+                <i class="fas fa-database"></i>
+                <span>Data</span>
+            </div>
+            <div class="central-computer">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section class="chapters" id="chapters">
+        <div class="section-header">
+            <span class="section-tag">📚 COURSE CONTENT</span>
+            <h2 class="section-title">Explore All <span class="gradient-text">Chapters</span></h2>
+            <p class="section-subtitle">Click any card to dive into interactive lessons with animations and examples</p>
+        </div>
+
+        <div class="chapters-grid">
+            <a href="chapters/intro.html" class="chapter-card" style="--delay: 0.1s; --color: #667eea;">
+                <div class="chapter-number">01</div>
+                <div class="chapter-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Introduction to CS</h3>
+                <p>What is Computer Science? Hardware, software, and the world of computing.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty easy">Easy</span>
+                    <span class="duration"><i class="far fa-clock"></i> 10 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/history.html" class="chapter-card" style="--delay: 0.15s; --color: #f093fb;">
+                <div class="chapter-number">02</div>
+                <div class="chapter-icon"><i class="fas fa-landmark"></i></div>
+                <h3>History of Computing</h3>
+                <p>From Abacus to ENIAC — the fascinating journey of computers through time.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty easy">Easy</span>
+                    <span class="duration"><i class="far fa-clock"></i> 12 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/binary.html" class="chapter-card highlighted" style="--delay: 0.2s; --color: #4facfe;">
+                <div class="chapter-number">03</div>
+                <div class="chapter-icon"><i class="fas fa-calculator"></i></div>
+                <h3>Bits & Binary</h3>
+                <p>Understand how computers speak in 0s and 1s. Convert numbers interactively!</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+                <div class="popular-badge">🔥 Popular</div>
+            </a>
+
+            <a href="chapters/boolean.html" class="chapter-card" style="--delay: 0.25s; --color: #43e97b;">
+                <div class="chapter-number">04</div>
+                <div class="chapter-icon"><i class="fas fa-toggle-on"></i></div>
+                <h3>Boolean Logic</h3>
+                <p>Master AND, OR, XOR, NOT gates with live truth tables and visual simulators.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/hexadecimal.html" class="chapter-card" style="--delay: 0.3s; --color: #fa709a;">
+                <div class="chapter-number">05</div>
+                <div class="chapter-icon"><i class="fas fa-hashtag"></i></div>
+                <h3>Hexadecimal</h3>
+                <p>Learn the shorthand notation using 0-9 and A-F to simplify binary patterns.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty easy">Easy</span>
+                    <span class="duration"><i class="far fa-clock"></i> 8 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/storage.html" class="chapter-card" style="--delay: 0.35s; --color: #ffecd2;">
+                <div class="chapter-number">06</div>
+                <div class="chapter-icon"><i class="fas fa-hdd"></i></div>
+                <h3>Storage Systems</h3>
+                <p>RAM, ROM, hard disks, SSDs, CDs — how computers remember information.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty easy">Easy</span>
+                    <span class="duration"><i class="far fa-clock"></i> 12 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/data-encoding.html" class="chapter-card" style="--delay: 0.4s; --color: #a8edea;">
+                <div class="chapter-number">07</div>
+                <div class="chapter-icon"><i class="fas fa-font"></i></div>
+                <h3>Data Encoding</h3>
+                <p>How text (ASCII), images (pixels), and sound become binary numbers.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/cpu.html" class="chapter-card highlighted" style="--delay: 0.45s; --color: #ff9a9e;">
+                <div class="chapter-number">08</div>
+                <div class="chapter-icon"><i class="fas fa-microchip"></i></div>
+                <h3>CPU & Machine Cycle</h3>
+                <p>Watch the Fetch-Decode-Execute cycle in action with animated CPU simulation!</p>
+                <div class="chapter-footer">
+                    <span class="difficulty hard">Advanced</span>
+                    <span class="duration"><i class="far fa-clock"></i> 20 min</span>
+                </div>
+                <div class="popular-badge">⭐ Must See</div>
+            </a>
+
+            <a href="chapters/os.html" class="chapter-card" style="--delay: 0.5s; --color: #fbc2eb;">
+                <div class="chapter-number">09</div>
+                <div class="chapter-icon"><i class="fab fa-windows"></i></div>
+                <h3>Operating Systems</h3>
+                <p>The manager of your computer — kernel, shell, memory, and scheduling.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 18 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/networks.html" class="chapter-card highlighted" style="--delay: 0.55s; --color: #89f7fe;">
+                <div class="chapter-number">10</div>
+                <div class="chapter-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Networks & Internet</h3>
+                <p>How your message travels across the world in milliseconds — visualized!</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 18 min</span>
+                </div>
+                <div class="popular-badge">🌐 Cool</div>
+            </a>
+
+            <a href="chapters/algorithms.html" class="chapter-card" style="--delay: 0.6s; --color: #a1c4fd;">
+                <div class="chapter-number">11</div>
+                <div class="chapter-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>Algorithms</h3>
+                <p>Step-by-step solutions to problems. Watch sorting algorithms dance!</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 20 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/programming.html" class="chapter-card" style="--delay: 0.65s; --color: #d4fc79;">
+                <div class="chapter-number">12</div>
+                <div class="chapter-icon"><i class="fas fa-code"></i></div>
+                <h3>Programming Languages</h3>
+                <p>From machine code to Python — generations and paradigms of programming.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/software-eng.html" class="chapter-card" style="--delay: 0.7s; --color: #ffecd2;">
+                <div class="chapter-number">13</div>
+                <div class="chapter-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Software Engineering</h3>
+                <p>Software Life Cycle, Waterfall vs Agile — how real software is built.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/database.html" class="chapter-card" style="--delay: 0.75s; --color: #ff9a9e;">
+                <div class="chapter-number">14</div>
+                <div class="chapter-icon"><i class="fas fa-database"></i></div>
+                <h3>Database Systems</h3>
+                <p>Organize data smartly — tables, relationships, and SQL basics.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty medium">Medium</span>
+                    <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+            </a>
+
+            <a href="chapters/ai.html" class="chapter-card" style="--delay: 0.8s; --color: #c471f5;">
+                <div class="chapter-number">15</div>
+                <div class="chapter-icon"><i class="fas fa-robot"></i></div>
+                <h3>Artificial Intelligence</h3>
+                <p>Machines that think! Turing Test, image recognition, and the future.</p>
+                <div class="chapter-footer">
+                    <span class="difficulty hard">Advanced</span>
+                    <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Interactive Playground -->
+    <section class="playground" id="playground">
+        <div class="section-header">
+            <span class="section-tag">🎮 INTERACTIVE</span>
+            <h2 class="section-title">Learning <span class="gradient-text">Playground</span></h2>
+            <p class="section-subtitle">Try these fun tools to practice what you learned!</p>
+        </div>
+
+        <div class="playground-grid">
+            <!-- Binary Converter -->
+            <div class="tool-card">
+                <div class="tool-header">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Binary Converter</h3>
+                </div>
+                <div class="tool-body">
+                    <label>Enter a decimal number (0-255):</label>
+                    <input type="number" id="decimalInput" min="0" max="255" value="13" placeholder="Try 13">
+                    <div class="result-box">
+                        <div class="result-item">
+                            <span>Binary:</span>
+                            <strong id="binaryResult">1101</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>Hex:</span>
+                            <strong id="hexResult">D</strong>
+                        </div>
+                    </div>
+                    <div class="bit-visualizer" id="bitVisualizer"></div>
+                </div>
+            </div>
+
+            <!-- Logic Gate Simulator -->
+            <div class="tool-card">
+                <div class="tool-header">
+                    <i class="fas fa-toggle-on"></i>
+                    <h3>Logic Gate Simulator</h3>
+                </div>
+                <div class="tool-body">
+                    <div class="gate-selector">
+                        <button class="gate-btn active" data-gate="AND">AND</button>
+                        <button class="gate-btn" data-gate="OR">OR</button>
+                        <button class="gate-btn" data-gate="XOR">XOR</button>
+                        <button class="gate-btn" data-gate="NOT">NOT</button>
+                    </div>
+                    <div class="gate-simulator">
+                        <div class="input-switch" id="inputA">
+                            <label>Input A</label>
+                            <div class="switch" data-value="0">0</div>
+                        </div>
+                        <div class="input-switch" id="inputB">
+                            <label>Input B</label>
+                            <div class="switch" data-value="0">0</div>
+                        </div>
+                        <div class="gate-output">
+                            <label>Output</label>
+                            <div class="lamp" id="gateOutput">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASCII Encoder -->
+            <div class="tool-card">
+                <div class="tool-header">
+                    <i class="fas fa-keyboard"></i>
+                    <h3>Text to Binary</h3>
+                </div>
+                <div class="tool-body">
+                    <label>Type any text:</label>
+                    <input type="text" id="textInput" maxlength="20" value="Hi" placeholder="Hello">
+                    <div class="binary-output" id="binaryOutput"></div>
+                    <small>💡 Each letter = 8 bits (1 byte) using ASCII</small>
+                </div>
+            </div>
+
+            <!-- Color Mixer (RGB) -->
+            <div class="tool-card">
+                <div class="tool-header">
+                    <i class="fas fa-palette"></i>
+                    <h3>RGB Color Mixer</h3>
+                </div>
+                <div class="tool-body">
+                    <div class="color-preview" id="colorPreview"></div>
+                    <div class="color-sliders">
+                        <div class="slider-group">
+                            <label style="color:#ff5555;">Red: <span id="redVal">128</span></label>
+                            <input type="range" id="redSlider" min="0" max="255" value="128">
+                        </div>
+                        <div class="slider-group">
+                            <label style="color:#55ff55;">Green: <span id="greenVal">128</span></label>
+                            <input type="range" id="greenSlider" min="0" max="255" value="128">
+                        </div>
+                        <div class="slider-group">
+                            <label style="color:#5555ff;">Blue: <span id="blueVal">128</span></label>
+                            <input type="range" id="blueSlider" min="0" max="255" value="128">
+                        </div>
+                    </div>
+                    <div class="color-info">
+                        HEX: <strong id="hexColor">#808080</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="quiz">
+        <div class="section-header">
+            <span class="section-tag">🏆 TEST YOURSELF</span>
+            <h2 class="section-title">Quick <span class="gradient-text">Quiz</span></h2>
+            <p class="section-subtitle">Check how much you've learned!</p>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-progress">
+                <div class="quiz-progress-bar" id="quizProgressBar"></div>
+            </div>
+            <div class="quiz-info">
+                <span>Question <strong id="currentQ">1</strong> of <strong id="totalQ">10</strong></span>
+                <span>Score: <strong id="quizScore">0</strong></span>
+            </div>
+            <div class="quiz-card" id="quizCard">
+                <h3 class="quiz-question" id="quizQuestion">Loading...</h3>
+                <div class="quiz-options" id="quizOptions"></div>
+            </div>
+            <div class="quiz-result" id="quizResult" style="display:none;">
+                <div class="result-emoji" id="resultEmoji">🎉</div>
+                <h2 id="resultTitle">Great Job!</h2>
+                <p id="resultText">You scored <strong></strong></p>
+                <button class="btn btn-primary" onclick="restartQuiz()">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="section-header">
+                <span class="section-tag">💡 ABOUT THIS SITE</span>
+                <h2 class="section-title">Why This <span class="gradient-text">Works</span>?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Simple Language</h3>
+                    <p>Complex topics explained in easy English — perfect for first-semester students.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Visual Learning</h3>
+                    <p>Animations and diagrams make abstract concepts concrete and memorable.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🕹️</div>
+                    <h3>Interactive Demos</h3>
+                    <p>Don't just read — try it yourself! Hands-on tools reinforce learning.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📖</div>
+                    <h3>Based on VU Book</h3>
+                    <p>Aligned with the official CS101 handouts from Virtual University of Pakistan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-microchip"></i> CS<strong>101</strong>
+            </div>
+            <p>Made with ❤️ for VU BSCS students</p>
+            <p class="copyright">© 2026 CS101 Interactive Learning Hub • Virtual University of Pakistan</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/playground.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
